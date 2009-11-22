@@ -17,12 +17,9 @@ class Foursquare
     return @consumer
   end
   
-  def request_token(current_user)
+  def request_token
     @consumer = consumer
     @request_token = @consumer.get_request_token
-    current_user.foursquare_request_token_key = @request_token.token
-    current_user.foursquare_request_token_secret = @request_token.secret
-    current_user.save!
     return @request_token
   end
   

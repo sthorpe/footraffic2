@@ -4,7 +4,6 @@ class SessionsController < ApplicationController
   
   # render new.rhtml
   def new
-    @oauth_request = Foursquare.new().request_token(current_user) 
   end
 
   def create
@@ -20,6 +19,7 @@ class SessionsController < ApplicationController
       handle_remember_cookie! new_cookie_flag
       redirect_back_or_default('/')
       flash[:notice] = "Logged in successfully"
+    elsif params[:oauth]
     else
       note_failed_signin
       @login       = params[:login]

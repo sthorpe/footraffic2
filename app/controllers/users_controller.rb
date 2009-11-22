@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   # render new.rhtml
   def new
     @user = User.new
+    @oauth_request = Foursquare.new().request_token
   end
  
   def create
@@ -16,8 +17,11 @@ class UsersController < ApplicationController
     success = @user && @user.valid?
     if success && @user.errors.empty?
       @user.activate!
+      @user.foursquare_request_token_key = @request_token.token
+      @user.foursquare_request_token_secret = @request_token.secret
+      @user.save!
       redirect_back_or_default('/')
-      flash[:notice] = "Thanks for signing up!  We're sending you an email with your activation code."
+      flash[:notice] = "Thanks for signing up!"
     else
       flash[:error]  = "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
       render :action => 'new'

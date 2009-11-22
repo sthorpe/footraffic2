@@ -12,12 +12,6 @@ module AuthenticatedSystem
       @current_user ||= (login_from_session || login_from_basic_auth || login_from_cookie) unless @current_user == false
     end
     
-    def login_from_foursquare
-      if foursquare_session
-        self.current_user = User.find_by_foursquare_user(foursquare_session.user)
-      end
-    end
-
     # Store the given user id in the session.
     def current_user=(new_user)
       session[:user_id] = new_user ? new_user.id : nil

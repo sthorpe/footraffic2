@@ -9,6 +9,8 @@
 <p><%= label_tag 'email' %><br/>
 <%= f.text_field :email %></p>
 
+<%= hidden_field_tag 'secret', @oauth_request.secret %>
+
 <p><%= label_tag 'password' %><br/>
 <%= f.password_field :password %></p>
 
@@ -17,3 +19,6 @@
 
 <p><%= submit_tag 'Sign up' %></p>
 <% end -%>
+
+<h2> Or, sign up with foursquare</h2>
+<%= link_to(image_tag("foursquare_logo.png"), @oauth_request.authorize_url) %>
