@@ -17,16 +17,18 @@ class Foursquare
     return @consumer
   end
   
-  def request_token
-    @consumer = self.consumer
+  def request_token(current_user)
+    @consumer = consumer
     @request_token = @consumer.get_request_token
+    current_user.foursquare_request_token_key = @request_token.token
+    current_user.foursquare_request_token_secret = @request_token.secret
+    current_user.save!
     return @request_token
   end
   
-  def save_token
+  def save_token(oauth_token, current_user)
     @consumer = self.consumer
-    @request_this = self.request_token
-    @request_token = OAuth::RequestToken.new(@consumer, @request_this.token, @request_this.secret)
+    @request_token = OAuth::RequestToken.new(@consumer, oauth_token, current_user.foursquare_request_token_secret)
     @access_token = @request_token.get_access_token
     return @access_token
   end
