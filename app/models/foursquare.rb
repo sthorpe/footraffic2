@@ -30,4 +30,12 @@ class Foursquare
     return @access_token
   end
   
+  def where_been
+    @consumer = OAuth::Consumer.new("C3Z0QKGMEWVH3AGUEAZRVAXZ5S51USUFNXZK5E1MVNOMEXAS","FQTLC5YZHXYRLDE5OBRE2CQXXK1TZX2JDFWF3BQGCQNYUHC2", {
+           :site               => "http://api.foursquare.com",
+           :scheme             => :header,
+           :http_method        => :post,
+          })
+    return @consumer
+  end
 end
