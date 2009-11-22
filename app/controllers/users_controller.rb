@@ -18,6 +18,7 @@ class UsersController < ApplicationController
     if success && @user.errors.empty?
       @user.activate!
       @business = Business.new(:organization_name => @user.email)
+      @business.save!
       @user.company_id = @business.id
       @user.save!
       redirect_to businesses_url(:id => @business.id)
