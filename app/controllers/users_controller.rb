@@ -13,11 +13,14 @@ class UsersController < ApplicationController
   def create
     logout_keeping_session!
     @user = User.new(params[:user])
-    @user.register! if @user && @user.valid?
-    success = @user && @user.valid?
+    @user.register! if @user
+    success = @user && @user.save
     if success && @user.errors.empty?
       @user.activate!
-      redirect_back_or_default('/')
+      @business = Business.new(:organization_name => @user.email)
+      @user.company_id = @business.id
+      @user.save!
+      redirect_to :controller => "Businesses", :action => "show", :id => @business.id
       flash[:notice] = "Thanks for signing up!"
     else
       flash[:error]  = "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."

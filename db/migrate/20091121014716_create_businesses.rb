@@ -11,7 +11,7 @@ class CreateBusinesses < ActiveRecord::Migration
       t.string :address_city
       t.string :address_state
       t.string :address_zipcode
-      t.date :state_date
+      t.date :start_date
       t.text :comment
       t.timestamps
     end
