@@ -23,10 +23,10 @@ class Foursquare
     return @request_token
   end
   
-  def save_token(oauth_token)
+  def save_token(params)
     @consumer = self.consumer
     @request = self.request_token
-    @request_token = OAuth::RequestToken.new(@consumer, oauth_token, @request.secret)
+    @request_token = OAuth::RequestToken.new(@consumer, params[:oauth_token], @request.secret)
     @access_token = @request_token.get_access_token
     return @access_token
   end

@@ -1,6 +1,7 @@
 class FoursquareController < ApplicationController
   
   def index
-    @access_token = Foursquare.new().save_token(params[:oauth_token])
+    @foursquare = Foursquare.new
+    @access_token = @foursquare.save_token(params)
   end
 end
