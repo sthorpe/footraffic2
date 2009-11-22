@@ -1,0 +1,14 @@
+User Profile
+<br/>
+<u>Your current offers: </u><br/>
+<br/>
+<% @offers.each do |offer| %>
+  --------------------------<br/>
+  <br/>
+  <table
+   <%= offer.name %><br/>
+   <br/>
+   <%= offer.percent_off %>
+  <br/>
+  --------------------------<br/>
+<% end %>

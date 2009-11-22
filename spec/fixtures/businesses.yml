@@ -1,7 +1,29 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
+  organization_name: MyString
+  key_contact: MyString
+  email_address: MyString
+  office_telephone: MyString
+  mobile_telephone: MyString
+  address_line1: MyString
+  address_line2: MyString
+  address_city: MyString
+  address_state: MyString
+  address_zipcode: MyString
+  state_date: 2009-11-22
+  comment: MyText
 
 two:
-  name: MyString
+  organization_name: MyString
+  key_contact: MyString
+  email_address: MyString
+  office_telephone: MyString
+  mobile_telephone: MyString
+  address_line1: MyString
+  address_line2: MyString
+  address_city: MyString
+  address_state: MyString
+  address_zipcode: MyString
+  state_date: 2009-11-22
+  comment: MyText

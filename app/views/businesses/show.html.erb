@@ -1,30 +1,63 @@
 <p>
-  <b>Name:</b>
-  <%=h @business.name %>
+  <b>Organization name:</b>
+  <%=h @business.organization_name %>
 </p>
 
-<center>
-  <img src= "/images/clocktowercoffee.png" alt= "Clock Tower Coffee logo">
-    </center>
+<p>
+  <b>Key contact:</b>
+  <%=h @business.key_contact %>
+</p>
 
-<center>
-  <h2>Offer Effectiveness Metrics</h2>
-    </center>
-<br/>
+<p>
+  <b>Email address:</b>
+  <%=h @business.email_address %>
+</p>
 
-<table>
-  <tr>
-    <td>
-      
-      </td>
-    <td>
-      <%= image_tag(daily_local_traffic_chart)%>
-      </td>
-    <td>
-      <%= image_tag(offers_viewed_pie_chart)%>
-      </td>
-        </tr>
-          </table>
+<p>
+  <b>Office telephone:</b>
+  <%=h @business.office_telephone %>
+</p>
+
+<p>
+  <b>Mobile telephone:</b>
+  <%=h @business.mobile_telephone %>
+</p>
+
+<p>
+  <b>Address line1:</b>
+  <%=h @business.address_line1 %>
+</p>
+
+<p>
+  <b>Address line2:</b>
+  <%=h @business.address_line2 %>
+</p>
+
+<p>
+  <b>Address city:</b>
+  <%=h @business.address_city %>
+</p>
+
+<p>
+  <b>Address state:</b>
+  <%=h @business.address_state %>
+</p>
+
+<p>
+  <b>Address zipcode:</b>
+  <%=h @business.address_zipcode %>
+</p>
+
+<p>
+  <b>State date:</b>
+  <%=h @business.state_date %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%=h @business.comment %>
+</p>
+
 
 <%= link_to 'Edit', edit_business_path(@business) %> |
 <%= link_to 'Back', businesses_path %>

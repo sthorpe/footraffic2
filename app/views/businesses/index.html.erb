@@ -2,12 +2,34 @@
 
 <table>
   <tr>
-    <th>Name</th>
+    <th>Organization name</th>
+    <th>Key contact</th>
+    <th>Email address</th>
+    <th>Office telephone</th>
+    <th>Mobile telephone</th>
+    <th>Address line1</th>
+    <th>Address line2</th>
+    <th>Address city</th>
+    <th>Address state</th>
+    <th>Address zipcode</th>
+    <th>State date</th>
+    <th>Comment</th>
   </tr>
 
 <% @businesses.each do |business| %>
   <tr>
-    <td><%=h business.name %></td>
+    <td><%=h business.organization_name %></td>
+    <td><%=h business.key_contact %></td>
+    <td><%=h business.email_address %></td>
+    <td><%=h business.office_telephone %></td>
+    <td><%=h business.mobile_telephone %></td>
+    <td><%=h business.address_line1 %></td>
+    <td><%=h business.address_line2 %></td>
+    <td><%=h business.address_city %></td>
+    <td><%=h business.address_state %></td>
+    <td><%=h business.address_zipcode %></td>
+    <td><%=h business.state_date %></td>
+    <td><%=h business.comment %></td>
     <td><%= link_to 'Show', business %></td>
     <td><%= link_to 'Edit', edit_business_path(business) %></td>
     <td><%= link_to 'Destroy', business, :confirm => 'Are you sure?', :method => :delete %></td>

@@ -1,3 +1,33 @@
+<p>
+  <b>Organization:</b>
+  <%=h @offer.organization_id %>
+</p>
+
+<p>
+  <b>Item:</b>
+  <%=h @offer.item %>
+</p>
+
+<p>
+  <b>Offer terms:</b>
+  <%=h @offer.offer_terms %>
+</p>
+
+<p>
+  <b>Offer expiration:</b>
+  <%=h @offer.offer_expiration %>
+</p>
+
+<p>
+  <b>Percent off:</b>
+  <%=h @offer.percent_off %>
+</p>
+
+<p>
+  <b>Free y n:</b>
+  <%=h @offer.free_y_n %>
+</p>
+
 
 <%= link_to 'Edit', edit_offer_path(@offer) %> |
 <%= link_to 'Back', offers_path %>

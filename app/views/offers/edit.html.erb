@@ -4,6 +4,30 @@
   <%= f.error_messages %>
 
   <p>
+    <%= f.label :organization_id %><br />
+    <%= f.text_field :organization_id %>
+  </p>
+  <p>
+    <%= f.label :item %><br />
+    <%= f.text_field :item %>
+  </p>
+  <p>
+    <%= f.label :offer_terms %><br />
+    <%= f.text_field :offer_terms %>
+  </p>
+  <p>
+    <%= f.label :offer_expiration %><br />
+    <%= f.date_select :offer_expiration %>
+  </p>
+  <p>
+    <%= f.label :percent_off %><br />
+    <%= f.text_field :percent_off %>
+  </p>
+  <p>
+    <%= f.label :free_y_n %><br />
+    <%= f.check_box :free_y_n %>
+  </p>
+  <p>
     <%= f.submit 'Update' %>
   </p>
 <% end %>

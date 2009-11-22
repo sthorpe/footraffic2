@@ -24,6 +24,10 @@ class UsersController < ApplicationController
       render :action => 'new'
     end
   end
+  
+  def show
+    @offers = Offer.all
+  end
 
   def activate
     logout_keeping_session!

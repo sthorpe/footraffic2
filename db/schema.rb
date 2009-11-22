@@ -12,12 +12,30 @@
 ActiveRecord::Schema.define(:version => 20091122023624) do
 
   create_table "businesses", :force => true do |t|
-    t.string   "name"
+    t.string   "organization_name"
+    t.string   "key_contact"
+    t.string   "email_address"
+    t.string   "office_telephone"
+    t.string   "mobile_telephone"
+    t.string   "address_line1"
+    t.string   "address_line2"
+    t.string   "address_city"
+    t.string   "address_state"
+    t.string   "address_zipcode"
+    t.date     "state_date"
+    t.text     "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "offers", :force => true do |t|
+    t.string   "name"
+    t.integer  "organization_id"
+    t.string   "item"
+    t.string   "offer_terms"
+    t.date     "offer_expiration"
+    t.integer  "percent_off",      :limit => 10, :precision => 10, :scale => 0
+    t.boolean  "free_y_n"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -33,6 +51,7 @@ ActiveRecord::Schema.define(:version => 20091122023624) do
     t.string   "remember_token",                  :limit => 40
     t.datetime "remember_token_expires_at"
     t.string   "activation_code",                 :limit => 40
+    t.integer  "company_id"
     t.datetime "activated_at"
     t.string   "state",                                          :default => "passive"
     t.datetime "deleted_at"
