@@ -5512,3 +5512,11 @@ Processing BusinessesController#new (for ::1 at 2009-11-22 15:35:41) [GET]
 Rendering template within layouts/application
 Rendering businesses/new
 Completed in 21ms (View: 12, DB: 3) | 200 OK [http://localhost/businesses/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for ::1 at 2009-11-22 15:51:24) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 858ms (View: 9, DB: 0) | 200 OK [http://localhost/]
