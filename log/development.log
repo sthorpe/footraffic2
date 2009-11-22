@@ -5299,3 +5299,216 @@ Rendering template within layouts/application
 Rendering users/show
   [4;35;1mOffer Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
 Completed in 13ms (View: 6, DB: 2) | 200 OK [http://localhost/users/show]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for ::1 at 2009-11-22 15:26:19) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mOffer Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+Completed in 24ms (View: 13, DB: 3) | 200 OK [http://localhost/users/show]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for ::1 at 2009-11-22 15:27:10) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mOffer Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+Completed in 12ms (View: 4, DB: 3) | 200 OK [http://localhost/users/show]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for ::1 at 2009-11-22 15:27:11) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mOffer Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+Completed in 12ms (View: 4, DB: 3) | 200 OK [http://localhost/users/show]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for ::1 at 2009-11-22 15:27:35) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mOffer Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+Completed in 10ms (View: 4, DB: 2) | 200 OK [http://localhost/users/show]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for ::1 at 2009-11-22 15:27:51) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mOffer Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+Completed in 11ms (View: 4, DB: 2) | 200 OK [http://localhost/users/show]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for ::1 at 2009-11-22 15:28:53) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mOffer Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+Completed in 12ms (View: 4, DB: 3) | 200 OK [http://localhost/users/show]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for ::1 at 2009-11-22 15:28:54) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mOffer Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+Completed in 10ms (View: 4, DB: 2) | 200 OK [http://localhost/users/show]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for ::1 at 2009-11-22 15:28:54) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mOffer Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+Completed in 13ms (View: 4, DB: 4) | 200 OK [http://localhost/users/show]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for ::1 at 2009-11-22 15:29:25) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mOffer Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+Completed in 12ms (View: 4, DB: 3) | 200 OK [http://localhost/users/show]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for ::1 at 2009-11-22 15:31:32) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mOffer Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+Completed in 13ms (View: 4, DB: 2) | 200 OK [http://localhost/users/show]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for ::1 at 2009-11-22 15:31:38) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 1749ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for ::1 at 2009-11-22 15:31:56) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 1737ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for ::1 at 2009-11-22 15:33:07) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mOffer Load (0.3ms)[0m   [0;1mSELECT * FROM `offers` [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mOffer Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+Completed in 11ms (View: 4, DB: 2) | 200 OK [http://localhost/users/show]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for ::1 at 2009-11-22 15:33:18) [GET]
+
+ActionController::RoutingError (No route matches "/business/news" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for ::1 at 2009-11-22 15:34:03) [GET]
+
+ActionController::RoutingError (No route matches "/business/new" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for ::1 at 2009-11-22 15:35:17) [GET]
+
+ActionController::RoutingError (No route matches "/business" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#index (for ::1 at 2009-11-22 15:35:34) [GET]
+  [4;36;1mBusiness Load (0.4ms)[0m   [0;1mSELECT * FROM `businesses` [0m
+Rendering template within layouts/application
+Rendering businesses/index
+  [4;35;1mBusiness Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+Completed in 367ms (View: 12, DB: 2) | 200 OK [http://localhost/businesses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#new (for ::1 at 2009-11-22 15:35:41) [GET]
+  [4;36;1mBusiness Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+Rendering template within layouts/application
+Rendering businesses/new
+Completed in 21ms (View: 12, DB: 3) | 200 OK [http://localhost/businesses/new]

@@ -66,6 +66,48 @@ div#navbar {
   top: 11px;
   right: 50px;
 }
+span.big_number {
+  font-size : 90px;
+  color : #777777; 
+}
+span.bigger_number {
+  font-size : 120px;
+}
+
+span.biggest_number {
+  font-size : 180px;
+}
+div.stats_section_title {
+  font-size : 12px;
+  color : #777777;  
+  font-weight : bold;
+  border-bottom: 1px solid #888888;
+  margin-bottom: 10px;
+}
+div.offer_line {
+border-bottom: 5px dotted #0066cc;
+}
+span.stats_mini_text {
+  font-size: 12px;
+	color: #BBBBBB;
+}
+span.stats_small_text {
+  font-size: 18px;
+	color: #BBBBBB;
+}
+
+div.stats_medium_text {
+  font-size : 22px;
+  color: #777777;
+	line-height: 20pt;	
+	font-weight : 600;
+}
+
+div.stats_big_text {
+  font-size: 35px;
+  line-height: 25pt;
+  font-weight: 600;
+}
 
 div#leftnav {
   float: left;
