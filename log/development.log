@@ -5011,3 +5011,291 @@ Processing SessionsController#new (for ::1 at 2009-11-22 14:58:52) [GET]
 Rendering template within layouts/application
 Rendering sessions/new
 Completed in 244ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for ::1 at 2009-11-22 15:01:21) [GET]
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 529ms (View: 15, DB: 3) | 200 OK [http://localhost/signup]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for ::1 at 2009-11-22 15:01:30) [POST]
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"zGaMxsjLc2rsQ3bg65NzwngoaLVQ4B9GUO8V5KspBEw=", "user"=>{"password"=>"testing", "email"=>"me@me.net"}}
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `activated_at`, `crypted_password`, `remember_token_expires_at`, `foursquare_request_token_secret`, `updated_at`, `deleted_at`, `activation_code`, `foursquare_request_token_key`, `remember_token`, `company_id`, `login`, `email`, `state`) VALUES('', '93a5d4db72e7d8cdf933c89e64b1de4cc41241d2', '2009-11-22 23:01:30', NULL, '36bea3c774b49e5feaffc61860db126178e83d77', NULL, NULL, '2009-11-22 23:01:30', NULL, '74fc8f81734a341f99009db292baf315d0e4e467', NULL, NULL, NULL, NULL, 'me@me.net', 'pending')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-22 23:01:31', `activated_at` = '2009-11-22 23:01:31', `activation_code` = NULL, `state` = 'active' WHERE `id` = 8[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mBusiness Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/businesses/show
+Completed in 101ms (DB: 6) | 302 Found [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#show (for ::1 at 2009-11-22 15:01:31) [GET]
+  Parameters: {"id"=>"show"}
+  [4;35;1mBusiness Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mBusiness Load (1.3ms)[0m   [0;1mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Business with ID=show):
+  app/controllers/businesses_controller.rb:16:in `show'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (96.4ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#show (for ::1 at 2009-11-22 15:05:32) [GET]
+  Parameters: {"id"=>"show"}
+  [4;35;1mBusiness Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mBusiness Load (1.1ms)[0m   [0;1mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Business with ID=show):
+  app/controllers/businesses_controller.rb:16:in `show'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#show (for ::1 at 2009-11-22 15:05:45) [GET]
+  Parameters: {"id"=>"show"}
+  [4;35;1mBusiness Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mBusiness Load (0.2ms)[0m   [0;1mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Business with ID=show):
+  app/controllers/businesses_controller.rb:16:in `show'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (98.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for ::1 at 2009-11-22 15:06:45) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 2257ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for ::1 at 2009-11-22 15:06:51) [GET]
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 442ms (View: 5, DB: 2) | 200 OK [http://localhost/signup]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for ::1 at 2009-11-22 15:06:57) [POST]
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"zGaMxsjLc2rsQ3bg65NzwngoaLVQ4B9GUO8V5KspBEw=", "user"=>{"password"=>"alsdkjfasdf", "email"=>"slkdjf@alsdkfj.com"}}
+  [4;36;1mUser Columns (61.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (284.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `created_at`, `activated_at`, `crypted_password`, `remember_token_expires_at`, `foursquare_request_token_secret`, `updated_at`, `deleted_at`, `activation_code`, `foursquare_request_token_key`, `remember_token`, `company_id`, `login`, `email`, `state`) VALUES('', '3da06f4477dd008dc86413be638ecf31d0c5dd10', '2009-11-22 23:06:58', NULL, 'e6a87247a34e44df06d8df5f8bdb1a4038fd9a2e', NULL, NULL, '2009-11-22 23:06:58', NULL, '2cb40c626ac0198fa83699da22ae1ff00cf980b1', NULL, NULL, NULL, NULL, 'slkdjf@alsdkfj.com', 'pending')[0m
+  [4;35;1mSQL (10.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (5.1ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-22 23:06:58', `activated_at` = '2009-11-22 23:06:58', `activation_code` = NULL, `state` = 'active' WHERE `id` = 9[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mBusiness Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+
+ActionController::RoutingError (business_url failed to generate from {:action=>"show", :controller=>"businesses", :id=>nil}, expected: {:action=>"show", :controller=>"businesses"}, diff: {:id=>nil}):
+  (eval):16:in `business_url'
+  app/controllers/users_controller.rb:23:in `create'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for ::1 at 2009-11-22 15:07:13) [POST]
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"zGaMxsjLc2rsQ3bg65NzwngoaLVQ4B9GUO8V5KspBEw=", "user"=>{"password"=>"alsdkjfasdf", "email"=>"slkdjf@alsdkfj.com"}}
+  [4;36;1mUser Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `created_at`, `activated_at`, `crypted_password`, `remember_token_expires_at`, `foursquare_request_token_secret`, `updated_at`, `deleted_at`, `activation_code`, `foursquare_request_token_key`, `remember_token`, `company_id`, `login`, `email`, `state`) VALUES('', 'c108e8f15146f1870ce0386818b3c521d5dbffa1', '2009-11-22 23:07:13', NULL, 'df81d0f80d88f74e1a4552492609389353f95a5c', NULL, NULL, '2009-11-22 23:07:13', NULL, 'af601d971bf360f0a584ed10e6d01ad6b0e71b09', NULL, NULL, NULL, NULL, 'slkdjf@alsdkfj.com', 'pending')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-22 23:07:13', `activated_at` = '2009-11-22 23:07:13', `activation_code` = NULL, `state` = 'active' WHERE `id` = 10[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mBusiness Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/businesses
+Completed in 40ms (DB: 9) | 302 Found [http://localhost/users]
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#index (for ::1 at 2009-11-22 15:07:13) [GET]
+  [4;36;1mBusiness Load (0.4ms)[0m   [0;1mSELECT * FROM `businesses` [0m
+Rendering template within layouts/application
+Rendering businesses/index
+  [4;35;1mBusiness Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+Completed in 19ms (View: 11, DB: 3) | 200 OK [http://localhost/businesses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for ::1 at 2009-11-22 15:17:17) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mOffer Load (0.3ms)[0m   [0;1mSELECT * FROM `offers` [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mOffer Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+Completed in 16ms (View: 9, DB: 2) | 200 OK [http://localhost/users/show]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for ::1 at 2009-11-22 15:19:13) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mOffer Load (1.4ms)[0m   [0;1mSELECT * FROM `offers` [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mOffer Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+
+ActionView::TemplateError (undefined method `expiration' for #<Offer:0x27284e8>) on line #9 of app/views/users/show.html.erb:
+6:   
+7:   <tr>
+8:   <td>
+9:    <div class="stats_big_text"><%= offer.name %><span class="stats_mini_text"> Expiration: <%= offer.expiration %></span></div>
+10:    <span class="big_number"><%= offer.percent_off %><span>
+11:     <div class="offer_line"> </div>
+12:    
+
+    app/views/users/show.html.erb:9
+    app/views/users/show.html.erb:5:in `each'
+    app/views/users/show.html.erb:5
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for ::1 at 2009-11-22 15:19:24) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mOffer Load (0.3ms)[0m   [0;1mSELECT * FROM `offers` [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mOffer Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+Completed in 14ms (View: 7, DB: 2) | 200 OK [http://localhost/users/show]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for ::1 at 2009-11-22 15:19:36) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mOffer Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+Completed in 14ms (View: 7, DB: 2) | 200 OK [http://localhost/users/show]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for ::1 at 2009-11-22 15:20:23) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mOffer Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+Completed in 14ms (View: 6, DB: 2) | 200 OK [http://localhost/users/show]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for ::1 at 2009-11-22 15:21:23) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mOffer Load (0.3ms)[0m   [0;1mSELECT * FROM `offers` [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mOffer Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+Completed in 14ms (View: 7, DB: 3) | 200 OK [http://localhost/users/show]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for ::1 at 2009-11-22 15:21:34) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mOffer Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+Completed in 13ms (View: 6, DB: 2) | 200 OK [http://localhost/users/show]

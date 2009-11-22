@@ -20,7 +20,7 @@ class UsersController < ApplicationController
       @business = Business.new(:organization_name => @user.email)
       @user.company_id = @business.id
       @user.save!
-      redirect_to :controller => "Businesses", :action => "show", :id => @business.id
+      redirect_to businesses_url(:id => @business.id)
       flash[:notice] = "Thanks for signing up!"
     else
       flash[:error]  = "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."

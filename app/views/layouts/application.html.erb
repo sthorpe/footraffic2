@@ -22,7 +22,6 @@
            <div id="leftnav"></div>
            <div id="middlenav">
               <% if logged_in? %>
-                Current location: <%= @location %> |
                 <%= link_to("Home", "/") %> |
                 <%= link_to("Logout", logout_url) %>
               <% else %>
