@@ -1,9 +1,10 @@
 # This controller handles the login/logout function of the site.  
 class SessionsController < ApplicationController
-
+  #before_filter :login_required, :except => [:new, :create]
+  
   # render new.rhtml
   def new
-    @oauth_request = Foursquare.new().request_token
+    @oauth_request = Foursquare.new().request_token 
   end
 
   def create
