@@ -17,9 +17,6 @@ class UsersController < ApplicationController
     success = @user && @user.valid?
     if success && @user.errors.empty?
       @user.activate!
-      @user.foursquare_request_token_key = @request_token.token
-      @user.foursquare_request_token_secret = @request_token.secret
-      @user.save!
       redirect_back_or_default('/')
       flash[:notice] = "Thanks for signing up!"
     else

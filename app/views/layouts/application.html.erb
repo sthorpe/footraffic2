@@ -20,7 +20,7 @@
    
        <div id="navbar">
        <div style="position: absolute;top:10px;right:570px;">
-        <img src="/images/foot_T_logo.png"/>
+        <%= link_to(image_tag("foot_T_logo.png"), "/") %>
        </div>
            <div id="leftnav"></div>
            <div id="middlenav">
@@ -29,9 +29,8 @@
                 <%= link_to("Home", "/") %> |
                 <%= link_to("Logout", logout_url) %>
               <% else %>
-                <%= link_to("Signup", signup_url) %> |
-                <%= link_to("Login", login_url) %> |
-                <a href="signup-merchant.html">Are you a vendor?</a>
+                <%= link_to("Are you a vendor?", signup_url) %> |
+                <%= link_to("Login", login_url) %>
               <% end %>
           </div>
           <div id="rightnav"/>

@@ -1,4 +1,4 @@
-<h1>Sign up as a new user</h1>
+<h1>Sign up as a new Vendor</h1>
 <% @user.password = @user.password_confirmation = nil %>
 
 <%= error_messages_for :user %>
@@ -20,5 +20,3 @@
 <p><%= submit_tag 'Sign up' %></p>
 <% end -%>
 
-<h2> Or, sign up with foursquare</h2>
-<%= link_to(image_tag("foursquare_logo.png"), @oauth_request.authorize_url) %>
