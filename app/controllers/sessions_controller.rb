@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
   # render new.rhtml
   def new
     @oauth_request = Foursquare.new().request_token
+    session[:oauth_request] = @oauth_request
   end
 
   def create
