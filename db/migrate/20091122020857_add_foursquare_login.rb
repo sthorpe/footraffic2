@@ -1,9 +1,11 @@
 class AddFoursquareLogin < ActiveRecord::Migration
   def self.up
-    add_column :users, :foursquare_login, :string
-    add_column :users, :foursquare_password, :string
+    add_column :users, :foursquare_request_token_key, :string
+    add_column :users, :foursquare_request_token_secret, :string
   end
 
   def self.down
+    remove_column :users, :foursquare_login
+    remove_column :users, :foursquare_password
   end
 end

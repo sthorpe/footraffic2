@@ -1,17 +1,34 @@
-require "rexml/document"
-require 'open-uri'
+require 'oauth'
 class Foursquare
-  @@attr_names = ["title", "description", "link", "geo_lat", "geo_long"]
-  attr_accessor *@@attr_names
   
-  def initialize(username, password)
-    doc = REXML::Document.new(open("http://api.foursquare.com/v1/user", :http_basic_authentication=>["sthorpe@gmail.com", "mytruelove"]))
-    if doc 
-      @@attr_names.each do |attr_name|
-        if object.has_key?(attr_name.to_sym)
-          self.send "#{attr_name}=", object.fetch(attr_name.to_sym)
-        end
-      end
-    end
+  def initialize
   end
+  
+  def consumer
+    @consumer = OAuth::Consumer.new("C3Z0QKGMEWVH3AGUEAZRVAXZ5S51USUFNXZK5E1MVNOMEXAS",
+                                    "FQTLC5YZHXYRLDE5OBRE2CQXXK1TZX2JDFWF3BQGCQNYUHC2", {
+                                     :site               => "http://foursquare.com",
+                                     :scheme             => :header,
+                                     :http_method        => :post,
+                                     :request_token_path => "/oauth/request_token",
+                                     :access_token_path  => "/oauth/access_token",
+                                     :authorize_path     => "/oauth/authorize"
+                                    })
+    return @consumer
+  end
+  
+  def request_token
+    @consumer = self.consumer
+    @request_token = @consumer.get_request_token
+    return @request_token
+  end
+  
+  def save_token
+    @consumer = self.consumer
+    @request = self.request_token
+    @request_token = OAuth::RequestToken.new(@consumer, @request.token, @request.secret)
+    @access_token = @request_token.get_access_token
+    return @access_token
+  end
+  
 end

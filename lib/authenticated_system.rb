@@ -14,7 +14,7 @@ module AuthenticatedSystem
     
     def login_from_foursquare
       if foursquare_session
-        self.current_user = User.find_by_fb_user(foursquare_session.user)
+        self.current_user = User.find_by_foursquare_user(foursquare_session.user)
       end
     end
 
