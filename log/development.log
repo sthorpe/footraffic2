@@ -3152,3 +3152,28 @@ Processing SessionsController#new (for ::1 at 2009-11-22 04:48:24) [GET]
 Rendering template within layouts/application
 Rendering sessions/new
 Completed in 587ms (View: 3, DB: 0) | 200 OK [http://localhost/session/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FoursquareController#index (for ::1 at 2009-11-22 04:50:48) [GET]
+
+OAuth::Unauthorized (400 Bad Request):
+  oauth (0.3.6) lib/oauth/consumer.rb:200:in `token_request'
+  oauth (0.3.6) lib/oauth/tokens/request_token.rb:18:in `get_access_token'
+  app/models/foursquare.rb:30:in `save_token'
+  app/controllers/foursquare_controller.rb:5:in `index'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.6ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
