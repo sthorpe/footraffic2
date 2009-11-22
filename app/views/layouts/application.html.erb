@@ -11,14 +11,17 @@
 
 <div id="container">
 <div id="header">
+
       <img height="150" width="948" src="/images/header.png" usemap="#hmap"/>
-   
       <map id="hmap" name="hmap">
        <area href="/" shape="rect" coords="18,0,345,129"/>
        <area href="/" shape="circle" coords="18,68,18"/>
       </map>
    
        <div id="navbar">
+       <div style="position: absolute;top:10px;right:570px;">
+        <img src="/images/foot_T_logo.png"/>
+       </div>
            <div id="leftnav"></div>
            <div id="middlenav">
               <% if logged_in? %>
@@ -42,7 +45,7 @@
 
 
 <div style="">
-
+   &nbsp;
 <p style="color: green"><%= flash[:notice] %></p>
 
 <%= yield %>

@@ -8,6 +8,21 @@ body {
   background-color: #eeeeee;
   margin: 0;
 }
+div.d, div.c, div.t {
+        float: left;
+        padding: 5px;
+      }
+      div.d {
+        width: 70px;
+      }
+      div.c {
+        width: 215px;
+      }
+      div.t {
+        width: 75px;
+        text-align: right;
+      }
+
 
 div {
   margin: 0;
