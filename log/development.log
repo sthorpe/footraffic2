@@ -7224,3 +7224,78 @@ Rendering foursquare/show
   [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
   [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 12) LIMIT 1[0m
 Completed in 315ms (View: 14, DB: 4) | 200 OK [http://localhost/foursquare?oauth_token=GNDITPFWEOYLTQ0NPG3L3FK2NE0UZH0AJBDED4O52UJRU0EQ]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FoursquareController#show (for ::1 at 2009-11-22 17:55:46) [GET]
+  Parameters: {"oauth_token"=>"GNDITPFWEOYLTQ0NPG3L3FK2NE0UZH0AJBDED4O52UJRU0EQ"}
+
+OAuth::Unauthorized (401 Unauthorized):
+  oauth (0.3.6) lib/oauth/consumer.rb:200:in `token_request'
+  oauth (0.3.6) lib/oauth/tokens/request_token.rb:18:in `get_access_token'
+  app/controllers/foursquare_controller.rb:6:in `show'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.1ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FoursquareController#show (for ::1 at 2009-11-22 17:56:46) [GET]
+  Parameters: {"oauth_token"=>"VAGP3E2R5DAYFIQXM2BVVOCSWSC21KUEQC0QY0PZOV0ZXVDJ"}
+
+OAuth::Unauthorized (401 Unauthorized):
+  oauth (0.3.6) lib/oauth/consumer.rb:200:in `token_request'
+  oauth (0.3.6) lib/oauth/tokens/request_token.rb:18:in `get_access_token'
+  app/controllers/foursquare_controller.rb:6:in `show'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OffersController#index (for ::1 at 2009-11-22 17:57:01) [GET]
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` [0m
+Rendering template within layouts/application
+Rendering offers/index
+  [4;35;1mOffer Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 12) LIMIT 1[0m
+Completed in 517ms (View: 138, DB: 5) | 200 OK [http://localhost/offers]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OffersController#show (for ::1 at 2009-11-22 17:57:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mOffer Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (2.1ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering offers/show
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 12) LIMIT 1[0m
+Completed in 28ms (View: 16, DB: 7) | 200 OK [http://localhost/offers/1]
