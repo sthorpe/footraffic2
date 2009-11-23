@@ -3,11 +3,11 @@
 <th><div class="stats_section_title">YOUR CURRENT OFFERS</div></th>
 
 <% @offers.each do |offer| %>
-  <tr>
+  <tr class='offerline'>
   <td>
-   <div class="stats_big_text"><%= offer.name unless offer.name.nil? %><span class="stats_mini_text"> Expiration: 23 days</span></div>
-   <span class="big_number"><%= offer.percent_off unless offer.percent_off.nil? %><span>
-    <div class="offer_line"> </div>   
+   <div class="stats_big_text"><%= offer.item unless offer.item.nil? %><span class="stats_mini_text"> Expiration: 23 days</span></div>
+   <span class="big_number"><%= "#{offer.percent_off}% OFF" unless offer.percent_off.nil? %><span>
+    <div class="offer_line"> </div>
   </td>
   </tr>
 <% end %>

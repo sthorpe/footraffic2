@@ -86,6 +86,8 @@ div.stats_section_title {
 }
 div.offer_line {
 border-bottom: 5px dotted #0066cc;
+margin-top: 10px;
+margin-bottom: 10px;
 }
 span.stats_mini_text {
   font-size: 12px;
@@ -94,6 +96,11 @@ span.stats_mini_text {
 span.stats_small_text {
   font-size: 18px;
 	color: #BBBBBB;
+}
+
+tr.offerline {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 div.stats_medium_text {

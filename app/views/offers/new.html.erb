@@ -8,16 +8,20 @@
     <%= f.text_field :name, :value => params[:company_name] %>
   </p>
   <p>
-    <%= f.label :item %><br />
+    <%= f.label :offer_name %><br />
     <%= f.text_field :item %>
   </p>
   <p>
-    <%= f.label :offer_terms %><br />
+    <%= f.label :offer_description %><br />
     <%= f.text_field :offer_terms %>
   </p>
   <p>
     <%= f.label :offer_expiration %><br />
     <%= f.date_select :offer_expiration %>
+  </p>
+  <p>
+    <%= f.label :percent_off %><br />
+    <%= f.text_field :percent_off %>
   </p>
   <p>
     <%= f.submit 'Create' %>
