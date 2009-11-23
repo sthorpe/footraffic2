@@ -7,6 +7,7 @@
   <td>
    <div class="stats_big_text"><%= offer.item unless offer.item.nil? %><span class="stats_mini_text"> Expiration: 23 days</span></div>
    <span class="big_number"><%= "#{offer.percent_off}% OFF" unless offer.percent_off.nil? %><span>
+   <div style="font-size:14px;">Available at: <strong><%= offer.name unless offer.name.nil? %></strong></div>
    <div class="offer_line"> </div>
   </td>
   </tr>

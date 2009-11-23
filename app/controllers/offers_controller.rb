@@ -13,7 +13,7 @@ class OffersController < ApplicationController
   # GET /offers/1
   # GET /offers/1.xml
   def show
-    @offer = Offer.find(params[:id])
+    @offers = Offer.all
 
     respond_to do |format|
       format.html # show.html.erb
