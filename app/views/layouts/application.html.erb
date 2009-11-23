@@ -22,7 +22,7 @@
            <div id="leftnav"></div>
            <div id="middlenav">
            <% if logged_in? %>
-             <%= link_to("Home", "/") %> |
+             <%= link_to("Home", "/businesses") %> |
              <%= link_to("Logout", logout_url) %>
            <% else %>
              <%= link_to("Are you a Business?", signup_url) %>

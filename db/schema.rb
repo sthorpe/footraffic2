@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20091122023624) do
     t.string   "address_city"
     t.string   "address_state"
     t.string   "address_zipcode"
-    t.date     "state_date"
+    t.date     "start_date"
     t.text     "comment"
     t.datetime "created_at"
     t.datetime "updated_at"

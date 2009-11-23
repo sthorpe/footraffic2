@@ -17,12 +17,14 @@ class UsersController < ApplicationController
     success = @user && @user.save
     if success && @user.errors.empty?
       @user.activate!
-      @business = Business.new(:organization_name => @user.email)
+      @business = Business.new(:organization_name => params[:company_name])
       @business.save!
       @user.company_id = @business.id
       @user.save!
-      redirect_to businesses_url(:id => @business.id)
-      flash[:notice] = "Thanks for signing up!"
+      @user = User.authenticate(params[:user][:email], params[:user][:password])
+      self.current_user = @user
+      redirect_to new_offer_url(:company_name => params[:company_name])
+      flash[:notice] = "Thanks for signing up! #{params[:company_name]}"
     else
       flash[:error]  = "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
       render :action => 'new'
