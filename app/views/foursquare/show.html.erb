@@ -1,0 +1,14 @@
+<h1>User Profile<h1>
+<table width="400px" align="center">
+<th><div class="stats_section_title">YOUR CURRENT OFFERS</div></th>
+
+<% @offers.each do |offer| %>
+  <tr>
+  <td>
+   <div class="stats_big_text"><%= offer.name unless offer.name.nil? %><span class="stats_mini_text"> Expiration: 23 days</span></div>
+   <span class="big_number"><%= offer.percent_off unless offer.percent_off.nil? %><span>
+    <div class="offer_line"> </div>   
+  </td>
+  </tr>
+<% end %>
+</table>

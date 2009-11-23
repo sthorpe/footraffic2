@@ -6,5 +6,6 @@ class FoursquareController < ApplicationController
     @access_token = @request_token.get_access_token
     @where_been = @foursquare.where_been
     @access = OAuth::AccessToken.new(@where_been,@access_token.token, @access_token.secret)
+    @offers = Offer.all
   end
 end
