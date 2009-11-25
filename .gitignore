@@ -1,0 +1,11 @@
+config/database.yml
+*~
+\#*#
+*.cache
+*.log
+*.pid
+*.db
+*.sqlite3
+tmp/**/*
+tmp/*
+.DS_Store
