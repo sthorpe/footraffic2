@@ -1,13 +1,11 @@
 class FoursquareController < ApplicationController
   
   def show
-    @foursquare = Foursquare.new
-    @request_token = OAuth::RequestToken.new(@foursquare.consumer, session[:oauth_request_token], session[:oauth_request_secret])
-    current_user.create_from_foursquare(session[:oauth_request_token], session[:oauth_request_secret])
-    @access_token = @request_token.get_access_token
-    @where_been = @foursquare.where_been
-    @access = OAuth::AccessToken.new(@where_been,@access_token.token, @access_token.secret)
-    @offers = Offer.all
+    @foursquare = Foursquare.new(session[:oauth_request_token],session[:oauth_request_secret])
+    @access = @foursquare.access_token
+    
+    # Commenting this out because it is a bit useless now.
+    # @offers = Offer.all
     
     respond_to do |format|
       format.html # index.html.erb
