@@ -14,14 +14,6 @@ describe OffersController do
     end
   end
 
-  describe "GET show" do
-    it "assigns the requested offer as @offer" do
-      Offer.stub!(:find).with("37").and_return(mock_offer)
-      get :show, :id => "37"
-      assigns[:offer].should equal(mock_offer)
-    end
-  end
-
   describe "GET new" do
     it "assigns a new offer as @offer" do
       Offer.stub!(:new).and_return(mock_offer)

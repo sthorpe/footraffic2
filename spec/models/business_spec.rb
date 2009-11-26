@@ -13,7 +13,7 @@ describe Business do
       :address_city => "value for address_city",
       :address_state => "value for address_state",
       :address_zipcode => "value for address_zipcode",
-      :state_date => Date.today,
+      :start_date => Date.today,
       :comment => "value for comment"
     }
   end

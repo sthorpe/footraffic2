@@ -40,6 +40,14 @@ class User < ActiveRecord::Base
     u = find_in_state :first, :active, :conditions => {:email => email.downcase} # need to get the salt
     u && u.authenticated?(password) ? u : nil
   end
+  
+  def self.create_from_foursquare(foursquare_user, foursquare_request_token_key, foursquare_request_token_secret)
+    new_foursquarer = User.new(:name => foursquare_user.name, :password => "", :email => "")
+    new_foursquarer.foursquare_request_token_key = foursquare_request_token_key
+    new_foursquarer.foursquare_request_token_secret = foursquare_request_token_secret
+    #We need to save without validations
+    new_foursquarer.save(false)
+  end
 
   def email=(value)
     write_attribute :email, (value ? value.downcase : nil)
