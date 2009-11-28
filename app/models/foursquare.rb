@@ -2,18 +2,15 @@ require 'oauth'
 class Foursquare
   attr_accessor :venues
   
-  def initialize(oauth_token, oauth_secret)
-    @oauth_token = oauth_token
-    @oauth_secret = oauth_secret
-    
-    @venues = self.find_venues
-    self.venues = []
-    if @venues
-      @venues.size.times do |num|
-        venue = Venue.new(@venues[num])
-        self.venues << venue
-      end
-    end
+  def initialize
+    # @venues = self.find_venues
+    # self.venues = []
+    # if @venues
+    #   @venues.size.times do |num|
+    #     venue = Venue.new(@venues[num])
+    #     self.venues << venue
+    #   end
+    # end
   end
   
   def consumer
