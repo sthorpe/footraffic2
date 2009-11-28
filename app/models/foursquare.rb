@@ -9,7 +9,7 @@ class Foursquare
     @venues = self.find_venues
     self.venues = []
     if @venues
-      @venutes.size.times do |num|
+      @venues.size.times do |num|
         venue = Venue.new(@venues[num])
         self.venues << venue
       end
