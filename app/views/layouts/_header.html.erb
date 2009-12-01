@@ -1,0 +1,21 @@
+<div id="header">
+  <img height="150" width="948" src="/images/header.png" usemap="#hmap"/>
+
+  <map id="hmap" name="hmap">
+    <area href="/" shape="rect" coords="18,0,345,129"/>
+    <area href="/" shape="circle" coords="18,68,18"/>
+  </map>
+
+   <div id="navbar">
+       <div id="leftnav"></div>
+       <div id="middlenav">
+       <% if logged_in? %>
+         <%= link_to("Home", "/businesses") %> |
+         <%= link_to("Logout", logout_url) %>
+       <% else %>
+         <%= link_to("Are you a Business?", signup_url) %>
+       <% end %>
+      </div>
+      <div id="rightnav"/>
+   </div>
+</div>
