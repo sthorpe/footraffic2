@@ -5,3 +5,4 @@ json -v=1.1.9
 mislav-will_paginate --source gems.github.com
 googlecharts --source gemcutter.org --version 1.4.0
 aasm
+oauth
