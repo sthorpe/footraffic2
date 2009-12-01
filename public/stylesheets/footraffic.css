@@ -23,7 +23,6 @@ div.d, div.c, div.t {
         text-align: right;
       }
 
-
 div {
   margin: 0;
   padding: 0;
@@ -719,4 +718,13 @@ div.autocomplete ul li {
   display: block;
   color: #aaa;
   font-size: 70%;
+}
+
+#main {
+  top: 0;
+  padding-left: 24px;
+  padding-bottom: 24px;
+  font-size: 13px;
+  color: #5a5858;
+  background-color: #ffffff;
 }
