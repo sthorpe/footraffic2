@@ -1,0 +1,16 @@
+%h1 Edit Address
+
+- semantic_form_for @address do |f|
+  = f.error_messages
+  - f.inputs do
+    = f.input :street
+    = f.input :street_2
+    = f.input :apt_suite
+    = f.input :city
+    = state_select("address", "state", country='US')
+    = f.input :zip_code
+  - f.buttons do
+    = f.update_button
+  
+= link_to 'Show', @address
+= link_to 'Back', addresses_path

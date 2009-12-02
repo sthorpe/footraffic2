@@ -1,0 +1,38 @@
+%h1 New Address
+
+- form_for(@address) do |f|
+  = f.error_messages
+
+  %p
+    = f.label :street
+    %br/
+    = f.text_field :street
+  
+  %p
+    = f.label :street_2
+    %br/
+    = f.text_field :street_2
+  
+  %p
+    .label Apt./Suite#
+    = f.text_field :apt_suite
+  
+  %p
+    = f.label :city
+    %br/
+    = f.text_field :city
+  
+  %p
+    = f.label :state
+    %br/
+    = state_select("address", "state", country='US')
+  
+  %p
+    = f.label :zip_code
+    %br/
+    = f.text_field :zip_code
+  
+  %p
+    = f.submit 'Create'
+  
+= link_to 'Back', addresses_path

@@ -1,8 +1,8 @@
-thoughtbot-factory_girl --source gems.github.com
-haml --version '>= 2.2.0'
-justinfrench-formtastic --source gems.github.com
-json -v=1.1.9
-mislav-will_paginate --source gems.github.com
-googlecharts --source gemcutter.org --version 1.4.0
 aasm
-oauth
+haml --version '>= 2.2.0'
+geokit
+mislav-will_paginate --source gems.github.com
+justinfrench-formtastic --source gems.github.com
+thoughtbot-factory_girl --source gems.github.com
+json -v=1.1.9
+aunderwo-acts_as_tree --source gems.github.com
