@@ -1,6 +1,6 @@
 class Location < ActiveRecord::Base
   include AASM
-  has_one :address
+  belongs_to :address
 
   validates_length_of :name, :within => 3..32
   validates_uniqueness_of :name, :case_sensitive => :false

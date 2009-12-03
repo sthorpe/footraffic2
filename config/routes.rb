@@ -4,6 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.register '/register', :controller => 'users', :action => 'create'
   map.signup '/signup', :controller => 'users', :action => 'new'
   map.foursquare '/foursquare', :controller => 'foursquare', :action => 'show'
+  map.resources :addresses
   map.resources :locations
   map.resources :users
   map.resources :offers

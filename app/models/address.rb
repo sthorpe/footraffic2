@@ -5,6 +5,8 @@ class Address < ActiveRecord::Base
   validates_presence_of :street
   validates_presence_of :city
   validates_presence_of :state
+  
+  has_many :locations
 
   def full_address
     out = "#{self.street}"
