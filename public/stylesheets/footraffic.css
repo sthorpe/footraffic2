@@ -723,6 +723,7 @@ div.autocomplete ul li {
 #main {
   top: 0;
   padding-left: 24px;
+  padding-right: 24px;
   padding-bottom: 24px;
   font-size: 13px;
   color: #5a5858;

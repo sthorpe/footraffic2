@@ -9,21 +9,50 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091122023624) do
+ActiveRecord::Schema.define(:version => 20091201230607) do
+
+  create_table "addresses", :force => true do |t|
+    t.string   "street"
+    t.string   "street_2"
+    t.string   "apt_suite"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip_code"
+    t.float    "lat"
+    t.float    "lng"
+    t.string   "type"
+    t.boolean  "public",     :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "businesses", :force => true do |t|
-    t.string   "organization_name"
-    t.string   "key_contact"
+    t.string   "name"
     t.string   "email_address"
     t.string   "office_telephone"
     t.string   "mobile_telephone"
-    t.string   "address_line1"
-    t.string   "address_line2"
-    t.string   "address_city"
-    t.string   "address_state"
-    t.string   "address_zipcode"
     t.date     "start_date"
     t.text     "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "state"
+    t.integer  "locations_count",  :default => 0
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.integer  "parent_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "locations", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "status"
+    t.integer  "address_id"
+    t.integer  "business_id"
+    t.integer  "foursquare_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

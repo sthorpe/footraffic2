@@ -1,0 +1,17 @@
+%h1 Listing Locations
+
+%table
+  %tr
+    %th Name
+    %th Address
+
+  - @locations.each do |location|
+    %tr
+      %td= link_to h(location.name), location_path(location)
+      %td= location.address.to_a
+      %td= link_to 'Edit', edit_location_path(location)
+      %td= link_to 'Destroy', location, :confirm => 'Are you sure?', :method => :delete
+
+%br/
+
+= link_to 'New location', new_location_path

@@ -1,0 +1,10 @@
+%h1 Edit Location
+
+- semantic_form_for(@location) do |f|
+  = f.error_messages
+  = f.inputs :name
+  = f.buttons :commit
+    
+= link_to 'Show', @location
+= " | "
+= link_to 'Back', locations_path
