@@ -1,0 +1,24 @@
+<h1>Step2</h1>
+
+
+<%= "<p style=\"color: green\">#{flash[:notice]}<p>" if flash[:notice] %>
+
+<% form_for :business, :url=>{:action=>:step2}  do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :office_telephone %><br />
+    <%= f.text_field :office_telephone %>
+  </p>
+  
+  <p>
+    <%= f.label :mobile_telephone %><br />
+    <%= f.text_field :mobile_telephone %>
+  </p>
+  <p>
+    <%= wizardly_submit %>
+  </p>
+<% end %>
+
+<script type='text/javascript'>
+  document.getElementById('business_office_telephone').focus()
+</script>

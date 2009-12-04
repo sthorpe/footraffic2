@@ -1,5 +1,5 @@
 class StoreSetupController < ApplicationController
-  def index
-    act_wizardly_for :business
-  end
+  act_wizardly_for :business,
+    :completed => '/store_setup/complete',
+    :canceled => { :action => :new }
 end

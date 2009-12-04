@@ -8,4 +8,5 @@ config/database.yml
 *.sqlite3
 tmp/**/*
 tmp/*
+db/schema.rb
 .DS_Store

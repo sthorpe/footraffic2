@@ -25,6 +25,7 @@ class LocationsController < ApplicationController
   # GET /locations/new.xml
   def new
     @location = Location.new
+    @location.address = Address.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,6 +41,10 @@ class LocationsController < ApplicationController
   # POST /locations
   # POST /locations.xml
   def create
+    if params[:location]
+      address = Address.create(params[:location][:address])
+      params[:location][:address] = nil
+    end
     @location = Location.new(params[:location])
 
     respond_to do |format|

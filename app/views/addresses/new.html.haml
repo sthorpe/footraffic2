@@ -1,38 +1,16 @@
 %h1 New Address
 
-- form_for(@address) do |f|
+- semantic_form_for(@address) do |f|
   = f.error_messages
-
-  %p
-    = f.label :street
-    %br/
-    = f.text_field :street
-  
-  %p
-    = f.label :street_2
-    %br/
-    = f.text_field :street_2
-  
-  %p
-    .label Apt./Suite#
-    = f.text_field :apt_suite
-  
-  %p
-    = f.label :city
-    %br/
-    = f.text_field :city
-  
-  %p
-    = f.label :state
-    %br/
-    = state_select("address", "state", country='US')
-  
-  %p
-    = f.label :zip_code
-    %br/
-    = f.text_field :zip_code
-  
-  %p
-    = f.submit 'Create'
+  - f.inputs do 
+    = f.input :street
+    = f.input :apt_suite, :required => false, :label => "Suite/Apt."
+    = f.input :street_2, :required => false
+    = f.input :city
+    %li#address_state_input
+      %label State*
+      = state_select('address', 'state')
+    = f.input :zip_code, :label => "Zip Code"
+  = f.buttons :commit
   
 = link_to 'Back', addresses_path

@@ -6,6 +6,11 @@ class CreateBusinesses < ActiveRecord::Migration
       t.string :email_address
       t.string :office_telephone
       t.string :mobile_telephone
+      t.string :address_line1
+      t.string :address_line2
+      t.string :address_city
+      t.string :address_state
+      t.string :address_zipcode
       t.date :start_date
       t.text :comment
       t.timestamps

@@ -1,0 +1,10 @@
+%h1 Step 3
+
+- semantic_form_for :business, :url => { :action => :finish }  do |f|
+  = f.error_messages
+
+  %p Locations
+  .buttons= wizardly_submit
+
+%script{:type => 'text/javascript'}
+  document.getElementById('business_locations').focus();s

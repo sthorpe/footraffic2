@@ -1,0 +1,66 @@
+.inputs, .buttons {
+  padding: 0;
+  border: none;
+  margin-top: 18px;
+  margin-bottom: 18px; }
+  .inputs ol, .buttons ol {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .inputs label, .buttons label {
+    display: block;
+    float: left;
+    font-weight: bold;
+    width: 80px;
+    text-align: right;
+    padding-right: 12px; }
+  .inputs li, .buttons li {
+    clear: both;
+    margin-bottom: 12px; }
+  .inputs input, .buttons input {
+    width: 220px; }
+  .inputs textarea, .buttons textarea {
+    height: 100px;
+    width: 360px; }
+
+#address_street_input {
+  float: left;
+  margin-right: 24px; }
+  #address_street_input label {
+    width: 80px; }
+  #address_street_input input {
+    width: 200px; }
+
+#address_street_2_input {
+  margin-right: 36px; }
+  #address_street_2_input input {
+    width: 200px; }
+
+#address_apt_suite_input label {
+  width: 60px; }
+#address_apt_suite_input input {
+  width: 60px; }
+
+#address_city_input input {
+  width: 200px; }
+
+#address_state_input input {
+  width: 200px; }
+
+#address_zip_code_input input {
+  width: 80px; }
+
+table {
+  margin-top: 18px;
+  margin-bottom: 18px; }
+  table td {
+    padding: 12px; }
+
+.business label {
+  width: 120px; }
+.business .buttons {
+  margin-left: 136px; }
+
+.buttons input {
+  width: 100px;
+  margin-right: 6px; }
