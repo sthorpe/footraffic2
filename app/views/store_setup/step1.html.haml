@@ -8,11 +8,7 @@
     = f.input :description, :as => :text, :required => false, :label => "Description"
     %li
       %label Category*  
-      = select("business", "primary_category", Category.all.collect {|p| [ p.name, p.id ] }, { :include_blank => false })
-    / - 2.times do |n|
-    /       %li
-    /         %label &nbsp;
-    /         = select("business", "categories", Category.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true })
+      = select("business", "categories", Category.all.collect {|p| [ p.name, p.id ] }, { :include_blank => false })
   .buttons= wizardly_submit
 
 %script{ :type => 'text/javascript' }
