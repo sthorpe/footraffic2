@@ -7,3 +7,4 @@ thoughtbot-factory_girl --source gems.github.com
 json -v=1.1.9
 aunderwo-acts_as_tree --source gems.github.com
 wizardly
+oauth
