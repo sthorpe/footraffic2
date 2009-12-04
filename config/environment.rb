@@ -27,7 +27,6 @@ Rails::Initializer.run do |config|
     :version => '~> 2.3.11' 
   config.gem 'justinfrench-formtastic',
     :lib => 'formtastic',           :source => 'http://gems.github.com'
-  config.gem 'state_machine',       :version => '0.6.3'
   config.gem "thoughtbot-factory_girl",
     :lib => "factory_girl",         :source => "http://gems.github.com"
   config.gem "wizardly"
