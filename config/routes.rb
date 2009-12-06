@@ -13,6 +13,11 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :session
   map.resource :store_wizard, :member => { :step1 => [:get, :post], :step2 => [:get, :post], :step3 => [:get, :post], :cancel => :post, :complete => :post }
 
+  map.namespace :admin do |admin|
+    admin.resources :businesses, :member => { :verify => :post, :suspend => :post }
+    admin.resources :locations, :member => { :verify => :post, :suspend => :post }
+  end
+
   map.root :controller => "sessions", :action => "new"
   
   map.connect ':controller/:action/:id'

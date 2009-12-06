@@ -1,0 +1,10 @@
+%h1
+  = link_to h(@location.business.name), business_path(@location.business)
+  = " : "
+  = h(@location.name)
+
+%p= h(@location.address.to_s)
+
+= link_to 'Edit', edit_admin_location_path(@location)
+= " | "
+= link_to 'Back', admin_locations_path

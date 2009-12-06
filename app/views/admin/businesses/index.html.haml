@@ -1,0 +1,27 @@
+%h1 Businesses
+
+%table
+  %tr
+    %th Name
+    %th Type
+    %th Category
+    %th Locations
+    %th Status
+    %th Status Actions
+    %th Actions
+    
+  - @businesses.each do |business|
+    %tr
+      %td= link_to h(business.name), business_path(business)
+      %td= h(business.primary_category.name)
+      %td= h(business.category.name)
+      %td= h(business.locations_count)
+      %td= business.status
+      %td.status_actions
+        - unless business.status == "verified"
+          = link_to 'Verify', verify_admin_business_path(business), :method => :post
+        - unless business.status == "suspended"
+          = link_to 'Suspend', suspend_admin_business_path(business), :method => :post
+      %td.actions
+        = link_to 'Edit', edit_admin_business_path(business)
+        = link_to 'Destroy', admin_business_path(business), :confirm => 'Are you sure?', :method => :delete

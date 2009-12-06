@@ -1,0 +1,19 @@
+%h1 New Location
+
+- semantic_form_for(@location, :url => admin_location_path, :action => :create) do |f|
+  = f.error_messages
+  - f.inputs do
+    = f.input :name
+    = f.input :phone
+    - f.semantic_fields_for :address do |a|
+      = a.input :street
+      = a.input :street_2
+      = a.input :apt_suite, :label => "Unit or Suite #"
+      = a.input :city
+      %li
+        %label State*
+        = state_select('location[address]', 'state')
+      = a.input :zip_code
+  = f.buttons
+
+= link_to 'Back', admin_locations_path

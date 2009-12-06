@@ -1,0 +1,8 @@
+%h1 Edit Location
+
+- semantic_form_for(@location, :url => admin_location_path, :method => :update) do |f|
+  = f.error_messages
+  = f.inputs :name
+  = f.buttons :commit
+
+= link_to 'Back', admin_locations_path

@@ -1,0 +1,20 @@
+%h1 Locations
+
+%table
+  %tr
+    %th Business
+    %th Location Name
+    %th Location Address
+    %th Status
+
+  - @locations.each do |location|
+    %tr
+      %td= link_to h(location.business.name), admin_business_path(location.business)
+      %td= link_to h(location.name), admin_location_path(location)
+      %td= location.address.to_a
+      %td= location.status
+      %td.actions
+        = link_to 'Verify', verify_admin_location_path(location), :method => :post
+        = link_to 'Suspend', suspend_admin_location_path(location), :method => :post
+        = link_to 'Edit', edit_admin_location_path(location)
+        = link_to 'Destroy', admin_location_path(location), :confirm => 'Are you sure?', :method => :delete
