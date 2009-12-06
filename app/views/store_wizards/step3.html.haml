@@ -3,7 +3,7 @@
 %ul
   %li= link_to "Complete", complete_store_wizard_path, :method => :post
 
-%pre= @business.to_yaml
+= render "businesses/business", :object => @business
 
 .buttons
   %ul

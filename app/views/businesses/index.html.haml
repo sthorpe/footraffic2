@@ -1,0 +1,5 @@
+%h1 Businesses
+
+%ul
+  - @businesses.each do |business|
+    %li= link_to h(business.name), business_path(business)

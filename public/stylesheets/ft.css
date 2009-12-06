@@ -64,3 +64,13 @@ table {
 .buttons input {
   width: 100px;
   margin-right: 6px; }
+
+.label {
+  float: left;
+  width: 100px;
+  font-weight: bold;
+  text-align: right;
+  margin-right: 12px; }
+
+p {
+  clear: both; }

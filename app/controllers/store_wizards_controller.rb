@@ -29,11 +29,13 @@ class StoreWizardsController < ApplicationController
   end
   
   def step3 # Review
-    current_business
+    @business = current_business
   end
   
   def complete # Create
-    clear_session_vars if current_business.save
+    if current_business.save && current_location.save
+      clear_session_vars
+    end
   end
 
   def current_business

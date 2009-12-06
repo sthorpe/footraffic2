@@ -1,6 +1,7 @@
 class Location < ActiveRecord::Base
   include AASM
   belongs_to :address
+  belongs_to :business
 
   validates_length_of :name, :within => 3..32
 

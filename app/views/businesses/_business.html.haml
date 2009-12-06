@@ -1,0 +1,27 @@
+%h2= h( @business.try(:name) )
+%p
+  .label Email:
+  = h( @business.email )
+%p
+  .label Phone:
+  = h( @business.phone )
+%p
+  .label Business Description:
+  = h( @business.description )
+%p
+  .label URL:
+  = h( @business.url )
+%p
+  .label Business Type:
+  = h( @business.primary_category.try(:name) )
+%p
+  .label Category:
+  = h( @business.category.try(:name) )
+
+%h3 Locations:
+- @business.locations.each do |loc|
+  %p
+    .label
+      = h(loc.name)
+      = " : "
+    = h(loc.address.to_s)
