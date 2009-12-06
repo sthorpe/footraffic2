@@ -14,6 +14,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :store_wizard, :member => { :step1 => [:get, :post], :step2 => [:get, :post], :step3 => [:get, :post], :cancel => :post, :complete => :post }
 
   map.namespace :admin do |admin|
+    admin.root :controller => "admin_site"
     admin.resources :businesses, :member => { :verify => :post, :suspend => :post }
     admin.resources :locations, :member => { :verify => :post, :suspend => :post }
   end
