@@ -1,5 +1,8 @@
 %h1 Step 1: Your Business
 
+%ul
+  %li= link_to "Cancel", cancel_store_wizard_path, :method => :post
+
 - semantic_form_for :business, :url=>{ :action => :step1 } do |f|
   = f.error_messages
   - f.inputs do
@@ -15,7 +18,3 @@
       %label Business Category*  
       = select("business", "category_id", Category.all_children.collect {|p| [ p.name, p.id ] }, { :include_blank => true })
     = f.buttons
-
-.buttons
-  %ul
-    %li= link_to "Cancel", cancel_store_wizard_path, :method => :post

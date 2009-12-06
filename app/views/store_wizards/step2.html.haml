@@ -1,4 +1,8 @@
-%h1 Step 2 : Store Locations
+%h1 Step 2 : Store Location
+
+%ul
+  %li= link_to "Back", step1_store_wizard_path
+  %li= link_to "Cancel", cancel_store_wizard_path, :method => :post
 
 = error_messages_for(:location)
 = error_messages_for(:address)
@@ -17,8 +21,3 @@
         = state_select('address', 'state')
       = a.input :zip_code
   = f.buttons
-
-.buttons
-  %ul
-    %li= link_to "Back", step1_store_wizard_path
-    %li= link_to "Cancel", cancel_store_wizard_path, :method => :post

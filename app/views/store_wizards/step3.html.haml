@@ -2,10 +2,7 @@
 
 %ul
   %li= link_to "Complete", complete_store_wizard_path, :method => :post
+  %li= link_to "Back", step2_store_wizard_path
+  %li= link_to "Cancel", cancel_store_wizard_path, :method => :post
 
 = render "businesses/business", :object => @business
-
-.buttons
-  %ul
-    %li= link_to "Back", step2_store_wizard_path
-    %li= link_to "Cancel", cancel_store_wizard_path, :method => :post

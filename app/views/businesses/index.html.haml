@@ -2,4 +2,7 @@
 
 %ul
   - @businesses.each do |business|
-    %li= link_to h(business.name), business_path(business)
+    %li
+      = link_to h(business.name), business_path(business)
+      = "- #{h(business.primary_category.name)}/"
+      = h(business.category.name)

@@ -2,7 +2,7 @@ class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.xml
   def index
-    @locations = Location.all
+    @locations = Location.verified.all
 
     respond_to do |format|
       format.html # index.html.erb
