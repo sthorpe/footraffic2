@@ -33,6 +33,7 @@ class StoreWizardsController < ApplicationController
   end
   
   def complete # Create
+    current_business.save
   end
 
   def current_business
