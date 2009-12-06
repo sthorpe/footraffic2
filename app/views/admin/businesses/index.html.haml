@@ -25,3 +25,6 @@
       %td.actions
         = link_to 'Edit', edit_admin_business_path(business)
         = link_to 'Destroy', admin_business_path(business), :confirm => 'Are you sure?', :method => :delete
+
+%ul
+  %li= link_to "Admin Home", admin_root_path
