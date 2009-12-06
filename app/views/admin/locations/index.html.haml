@@ -6,6 +6,8 @@
     %th Location Name
     %th Location Address
     %th Status
+    %th Status Actions
+    %th Actions
 
   - @locations.each do |location|
     %tr
@@ -13,9 +15,10 @@
       %td= link_to h(location.name), admin_location_path(location)
       %td= location.address.to_a
       %td= location.status
-      %td.actions
+      %td.status_actions
         = link_to 'Verify', verify_admin_location_path(location), :method => :post
         = link_to 'Suspend', suspend_admin_location_path(location), :method => :post
+      %td.actions
         = link_to 'Edit', edit_admin_location_path(location)
         = link_to 'Destroy', admin_location_path(location), :confirm => 'Are you sure?', :method => :delete
 
