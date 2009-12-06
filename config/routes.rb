@@ -6,6 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   map.foursquare '/foursquare', :controller => 'foursquare', :action => 'show'
   map.resources :addresses
   map.resources :locations
+  map.resources :categories
   map.resources :users
   map.resources :offers
   map.resources :businesses
