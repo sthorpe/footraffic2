@@ -16,7 +16,7 @@
       %td= h(business.primary_category.name)
       %td= h(business.category.name)
       %td= h(business.locations_count)
-      %td= business.status
+      %td= location.status.titleize
       %td.status_actions
         - unless business.status == "verified"
           = link_to 'Verify', verify_admin_business_path(business), :method => :post
