@@ -1,4 +1,4 @@
 class Category < ActiveRecord::Base
-  has_many :businesses_categories
-  has_many :businesses, :through => :businesses_categories
+  acts_as_tree :order => "name"
+  named_scope :all_children, :conditions => "parent_id IS NOT NULL"
 end

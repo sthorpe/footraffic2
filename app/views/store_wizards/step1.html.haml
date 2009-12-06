@@ -13,7 +13,8 @@
     %li
       %label Business Category*  
       = select("business", "category_id", Category.all_children.collect {|p| [ p.name, p.id ] }, { :include_blank => true })
-  .buttons= wizardly_submit
+    = f.buttons
 
-%script{ :type => 'text/javascript' }
-  document.getElementById('business_name').focus();
+.buttons
+  %ul
+    %li= link_to "Cancel", cancel_store_wizard_path, :method => :post

@@ -44,15 +44,10 @@ class BusinessesController < ApplicationController
   def create
     @business = Business.new(params[:business])
 
-    respond_to do |format|
-      if @business.save
-        flash[:notice] = 'Business was successfully created.'
-        format.html { redirect_to(@business) }
-        format.xml  { render :xml => @business, :status => :created, :location => @business }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @business.errors, :status => :unprocessable_entity }
-      end
+    if @business.save
+      redirect_to step2_store_wizard_url
+    else
+      render :template => "store_wizards/step1"
     end
   end
 

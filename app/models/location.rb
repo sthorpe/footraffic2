@@ -3,7 +3,6 @@ class Location < ActiveRecord::Base
   belongs_to :address
 
   validates_length_of :name, :within => 3..32
-  validates_uniqueness_of :name, :case_sensitive => :false
 
   aasm_column :status
   aasm_initial_state :unverified

@@ -1,0 +1,165 @@
+shops:
+  id: 1
+  name: Shops
+restaurants:
+  id: 2
+  name: Restaurants
+entertainment:
+  id: 3
+  name: Entertainment
+
+shop_1:
+  parent_id: 1
+  name: Apparel, Shoes & Accessories 
+shop_2:
+  parent_id: 1
+  name: Appliances & Electronics 
+shop_3:
+  parent_id: 1
+  name: Automotive 
+shop_4:
+  parent_id: 1
+  name: Beauty 
+shop_5:
+  parent_id: 1
+  name: Bookstores 
+shop_6:
+  parent_id: 1
+  name: Computers & Office Equipment 
+shop_7:
+  parent_id: 1
+  name: Dry Cleaning, Laundry & Tailoring 
+shop_8:
+  parent_id: 1
+  name: Fitness & Gyms 
+shop_9:
+  parent_id: 1
+  name: Floral 
+shop_10:
+  parent_id: 1
+  name: Groceries, Baked Foods & Liquor 
+shop_11:
+  parent_id: 1
+  name: Health 
+shop_12:
+  parent_id: 1
+  name: Home & Garden 
+shop_13:
+  parent_id: 1
+  name: Hotels and Lodging 
+shop_14:
+  parent_id: 1
+  name: Jewelry 
+shop_15:
+  parent_id: 1
+  name: Movies, Music & Games 
+shop_16:
+  parent_id: 1
+  name: Mobile Phones and Services 
+shop_17:
+  parent_id: 1
+  name: Services 
+shop_18:
+  parent_id: 1
+  name: Sporting Goods & Outdoors 
+shop_19:
+  parent_id: 1
+  name: Specialty 
+shop_20:
+  parent_id: 1
+  name: Superstores & Department Stores 
+shop_21:
+  parent_id: 1
+  name: Toys, Kids & Baby 
+
+restaurant_1:
+  parent_id: 2
+  name: American 
+restaurant_2:
+  parent_id: 2
+  name: African 
+restaurant_3:
+  parent_id: 2
+  name: Cafe and Deli 
+restaurant_4:
+  parent_id: 2
+  name: Chinese 
+restaurant_5:
+  parent_id: 2
+  name: Desserts 
+restaurant_6:
+  parent_id: 2
+  name: Fastfood, Burgers & Pizzas 
+restaurant_7:
+  parent_id: 2
+  name: French 
+restaurant_8:
+  parent_id: 2
+  name: Indian 
+restaurant_9:
+  parent_id: 2
+  name: Italian 
+restaurant_10:
+  parent_id: 2
+  name: Japanese 
+restaurant_11:
+  parent_id: 2
+  name: Korean 
+restaurant_12:
+  parent_id: 2
+  name: Latin American 
+restaurant_13:
+  parent_id: 2
+  name: Mexican 
+restaurant_14:
+  parent_id: 2
+  name: Middle Eastern 
+restaurant_15:
+  parent_id: 2
+  name: Other European 
+restaurant_16:
+  parent_id: 2
+  name: Other Asian 
+restaurant_17:
+  parent_id: 2
+  name: Thai 
+
+entertainment_1:
+  parent_id: 3
+  name: Arcades 
+entertainment_2:
+  parent_id: 3
+  name: Bars 
+entertainment_3:
+  parent_id: 3
+  name: Bowling Alleys 
+entertainment_4:
+  parent_id: 3
+  name: Cabarets 
+entertainment_5:
+  parent_id: 3
+  name: Casinos 
+entertainment_6:
+  parent_id: 3
+  name: Comedy Clubs 
+entertainment_7:
+  parent_id: 3
+  name: Karaoke 
+entertainment_8:
+  parent_id: 3
+  name: Live Music Venues 
+entertainment_9:
+  parent_id: 3
+  name: Movie Theaters 
+entertainment_10:
+  parent_id: 3
+  name: Museums 
+entertainment_11:
+  parent_id: 3
+  name: Night Clubs 
+entertainment_12:
+  parent_id: 3
+  name: Pool Halls 
+entertainment_13:
+  parent_id: 3
+  name: Sports Venues 
