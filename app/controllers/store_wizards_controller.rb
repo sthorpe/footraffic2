@@ -33,7 +33,7 @@ class StoreWizardsController < ApplicationController
   end
   
   def complete # Create
-    current_business.save
+    clear_session_vars if current_business.save
   end
 
   def current_business
@@ -59,9 +59,13 @@ class StoreWizardsController < ApplicationController
   end
 
   def cancel
+    clear_session_vars
+    redirect_to store_wizard_path
+  end
+
+  def clear_session_vars
     session[:business] = nil
     session[:location] = nil
-    redirect_to store_wizard_path
   end
 
 end
