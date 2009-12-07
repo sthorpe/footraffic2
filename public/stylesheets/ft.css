@@ -87,3 +87,13 @@ p {
     text-align: right;
     float: left;
     margin-left: 18px; }
+
+.offer_terms {
+  font-size: 1.3em;
+  margin-left: 80px; }
+  .offer_terms input {
+    width: 80px;
+    font-size: 2em;
+    text-align: right; }
+  .offer_terms .radio {
+    width: 15px; }

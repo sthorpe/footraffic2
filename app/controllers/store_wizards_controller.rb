@@ -18,7 +18,7 @@ class StoreWizardsController < ApplicationController
     current_business
     current_location
     if params[:location]
-      @location = @business.locations.build(params[:location])
+      @location = @business.locations.build(params[:location]) if @business.locations.size == 0
       @address = Address.new(params[:address])
       @location.address = @address
       session[:location] = @location

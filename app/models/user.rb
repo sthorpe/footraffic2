@@ -28,7 +28,6 @@ class User < ActiveRecord::Base
 
   has_one :business
 
-
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
   #
   # uff.  this is really an authorization, not authentication routine.  

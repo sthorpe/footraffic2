@@ -2,9 +2,11 @@ class Business < ActiveRecord::Base
   include AASM
   has_many :offers
   has_many :locations
+  has_many :addresses, :through => :locations
 
   belongs_to :primary_category, :class_name => "Category"
   belongs_to :category
+  belongs_to :owner, :class_name => "User"
 
   validates_uniqueness_of :name, :case_sensitive => false
   validates_length_of :name, :within => 2..32

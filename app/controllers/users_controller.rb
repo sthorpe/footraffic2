@@ -3,8 +3,6 @@ class UsersController < ApplicationController
   # before_filter :admin_required, :only => [:suspend, :unsuspend, :destroy, :purge]
   before_filter :find_user, :only => [:suspend, :unsuspend, :destroy, :purge]
   
-
-  # render new.rhtml
   def new
     @user = User.new
     @oauth_request = Foursquare.new().request_token
@@ -17,14 +15,14 @@ class UsersController < ApplicationController
     success = @user && @user.save
     if success && @user.errors.empty?
       @user.activate!
-      @business = Business.new(:organization_name => params[:company_name])
-      @business.save!
-      @user.company_id = @business.id
-      @user.save!
-      @user = User.authenticate(params[:user][:email], params[:user][:password])
-      self.current_user = @user
-      redirect_to new_offer_url(:company_name => params[:company_name])
-      flash[:notice] = "Thanks for signing up! #{params[:company_name]}"
+      # @business = Business.new(:name => params[:name])
+      # @business.save!
+      # @user.company_id = @business.id
+      # @user.save!
+      # @user = User.authenticate(params[:user][:email], params[:user][:password])
+      # self.current_user = @user
+      redirect_to store_wizard_path
+      flash[:notice] = "Thanks for signing up! #{params[:name]}"
     else
       flash[:error]  = "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
       render :action => 'new'

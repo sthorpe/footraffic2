@@ -10,7 +10,7 @@
     - semantic_form_for :address do |a|
       = a.input :street
       = a.input :apt_suite, :label => "Unit or Suite"
-      = a.input :street_2
+      = a.input :street_2, :required => false
       = a.input :city
       %li
         %label State*
